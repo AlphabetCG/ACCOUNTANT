@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NAPHAT Landing Page</title>
+    <style>
+        /* Navbar Styles */
+        .navbar {
+            background-color: #0f0f0f;
+            padding: 25px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .navbar .logo {
+            color: white;
+            font-size: 40px;
+            font-family: monospace;
+            font-weight: 550;
+            position: absolute;
+            left: 50px;
+        }
+
+        .navbar ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        .navbar li {
+            margin: 0 25px;
+        }
+
+        .navbar a {
+            color: rgb(151, 148, 148);
+            text-decoration: none;
+            font-size: 25px;
+            transition: color 0.3s;
+            font-family: monospace;
+        }
+
+        .navbar a:hover {
+            color: #e9950e;
+        }
+
+        /* Smooth Scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Body Styles */
+        body {
+            font-family: monospace;
+            background: linear-gradient(135deg, #000000, #555555);
+            margin: 0;
+            padding-top: 100px;
+            text-align: center;
+            animation: fadeIn 3s ease-in;
+        }
+
+        h1, h2 {
+            color: #e9d8d8;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 100px;
+            margin-bottom: 200px;
+        }
+
+        h2 {
+            font-size: 70px;
+            color: #b9b0b0;
+            margin-bottom: 500px;
+        }
+
+        /* Section Styles */
+        section {
+            padding: 50px 20px;
+            margin-bottom: 50px;
+            background: linear-gradient(135deg, #000000, #555555);
+        }
+
+        hr {
+            border: none;
+            border-top: 2px solid #201e1e;
+            margin: 0;
+            width: 100%;
+        }
+
+        /* Swapping Text Styles */
+        #about h1 {
+            color: #cbc4c4;
+            font-size: 100px;
+            text-align: left;
+            margin-left: 180px;
+            margin-bottom: 30px;
+        }
+
+        #about .swapping-text {
+            color: rgb(147, 144, 144);
+            font-size: 60px;
+            text-align: left;
+            opacity: 1; /* Initial opacity */
+            transition: opacity 1s ease-in-out; /* Smooth fade effect */
+        }
+
+        /* About Me Section */
+
+        .content-container {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            margin-left: 180px;
+            margin-right: 180px;
+        }
+
+        .image-container img {
+            width: 300px; /* Adjust as needed */
+            height: 300px; /* Adjust as needed */
+            border-radius: 50%;
+            margin-right: 50px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .text-container {
+            max-width: 600px;
+            text-align: left;
+        }
+
+        .text-container h2 {
+            font-size: 36px;
+            color: #b9b0b0;
+            margin-bottom: 20px;
+        }
+
+        .text-container p {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #c9c3c3;
+            margin-bottom: 20px;
+        }
+
+        /* General Styles for Paragraphs */
+        p {
+            font-size: 20px;
+            line-height: 1.7;
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">NAPHAT</div>
+        <ul>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Heading -->
+    <h1>Welcome to</h1>
+    <h2>Naphat Utabuawong's Website</h2>
+
+    <hr>
+
+    <!-- About Me Section with Swapping Text -->
+    <section id="about">
+        <h1>About Me</h1>
+        <div class="content-container">
+            <div class="image-container">
+                <img src="IMG_2911.jpg" alt="Naphat Pic">
+            </div>
+            <div class="text-container">
+                <h2 class="swapping-text" id="swapText">Software Developer</h2>
+                <p>
+                    <strong>Naphat Utabuawong</strong>  is a software developer currently studying Computer Engineering at King Mongkut's University of Technology Thonburi (KMUTT). He is also a co-founder of ACCBANA Thailand, an accounting software company.
+                </p>
+                <p>
+                    Naphat is also a musician, formerly the guitarist of the rock band <strong>SlashThree</strong> In addition to his guitar work, he is a pianist and vocalist. Naphat is also a gamer, playing Valorant for the team <strong>Angel of Death</strong> in Division 19 of the Valorant Premier
+                </p>
+            </div>
+        </div>
+    </section>
+    
+    
+    <!-- Education Section -->
+    <section id="Education">
+        <h1>Education</h1>
+        <p>This is the Education section</p>
+    </section>
+    <hr>
+    
+    
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <h1>Skills</h1>
+        <p>This is the Skills section.</p>
+    </section>
+    <hr>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h1>Contact</h1>
+        <p>This is the Contact section.</p>
+    </section>
+
+    <!-- JavaScript for Swapping Text with Smooth Animation -->
+    <script>
+        // Array of text strings you want to swap
+        const textArray = [
+            "Software Developer",
+            "Game Developer",
+            "Guitarist and Vocalist",
+            "Computer Engineering KMUTT"
+        ];
+
+        // Current index for the array
+        let currentIndex = 0;
+
+        // Function to swap the text with fade-out and fade-in effect
+        function swapText() {
+            // Get the text element by its ID
+            const textElement = document.getElementById("swapText");
+
+            // Fade out the text
+            textElement.style.opacity = 0;
+
+            // After fading out, swap the text and fade it back in
+            setTimeout(() => {
+                // Update the text with the next item from the array
+                textElement.textContent = textArray[currentIndex];
+
+                // Increment the index (and loop back to 0 if needed)
+                currentIndex = (currentIndex + 1) % textArray.length;
+
+                // Fade the text back in
+                textElement.style.opacity = 1;
+            }, 1000); // Match this with the CSS transition duration
+        }
+
+        // Change the text every 3 seconds (3000 milliseconds)
+        setInterval(swapText, 5000);
+    </script>
+
+</body>
+</html>
